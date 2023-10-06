@@ -10,7 +10,7 @@ int main(void)
 
 	for (; x <= 'z';)
 	{
-		if ( x == 'q' || x == 'e')
+		if (x == 'q' || x == 'e')
 		{
 			x++;
 		}
