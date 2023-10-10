@@ -4,9 +4,9 @@
 
 /**
  * _isalpha - Checks for alphabetic character
- * *@c:  The character to be checked
+ * @c:  The character to be checked
  *
- * Description: Retuen 1 for alphabetic characters 0 otherwise
+ * Retuen: 1 for alphabetic characters 0 otherwise
  */
 int _isalpha(int c)
 {
