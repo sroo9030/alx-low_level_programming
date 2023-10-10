@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * _isalpha - checks for alphabetic character
+ * _isalpha - function that checks for alphabetic character
  * @c:  The character to check
  *
  * Retuen: 1 if c is a letter, 0 otherwise
