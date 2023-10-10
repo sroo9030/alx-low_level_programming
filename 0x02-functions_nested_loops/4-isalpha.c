@@ -4,7 +4,7 @@
 
 /**
  * _isalpha - Checks for alphabetic character
- * @c:  The character to be check
+ * *@c:  The character to be checked
  *
  * Retuen: 1 for alphabetic characters 0 otherwise
  */
