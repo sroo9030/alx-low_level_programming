@@ -12,10 +12,10 @@ int main(void)
 	long int sum;
 	int i;
 
-	for( i = 1; i <= 50; i++)
+	for (i = 1; i <= 50; i++)
 	{
 		if (i == 50)
-			printf("%lu \n", sum);
+			printf("%lu\n", sum);
 
 		else if (i < 3)
 			printf("%d, ", i);
