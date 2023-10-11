@@ -3,6 +3,8 @@
 
 /**
   * add - Adds two integers
+  * @n1: The first integer to be added
+  * @n2: The second integer to be added
   *
   * Return: The result of addition
   */
