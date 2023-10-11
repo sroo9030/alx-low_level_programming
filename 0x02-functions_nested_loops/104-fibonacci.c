@@ -13,9 +13,9 @@ int main(void)
 	int i;
 
 	printf("%lu, %lu, ", num1, num2);
-	for (i = 0; i <= 98; i++)
+	for (i = 2; i < 98; i++)
 	{
-		if (i != 98 && i != 0)
+		if (i != 97 && i != 0)
 			printf(", ");
 
 		if (num1 + num2 > 10000000000 || num_h2 > 0 || num_h1 > 0)
