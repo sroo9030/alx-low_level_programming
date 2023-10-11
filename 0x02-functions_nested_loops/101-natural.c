@@ -15,8 +15,6 @@ int main(void)
 			sum += n;
 		}
 	}
-	printf("%d \n", sum);
-	/* putchar(((sum / 10) % 10) + '0');
-	putchar('\n'); */
+	printf("%d\n", sum);
 	return (0);
 }
