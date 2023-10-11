@@ -12,10 +12,10 @@ int main(void)
 	unsigned long sum, h1, h2;
 	int i;
 
-	printf("%lu, %lu, ", num1, num2);
+	printf("%lu, %lu", num1, num2);
 	for (i = 2; i < 98; i++)
 	{
-		if (i != 97 && i != 0)
+		if (i != 97)
 			printf(", ");
 
 		if (num1 + num2 > 10000000000 || num_h2 > 0 || num_h1 > 0)
