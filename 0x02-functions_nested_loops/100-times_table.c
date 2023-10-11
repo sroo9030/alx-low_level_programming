@@ -18,7 +18,7 @@ void print_times_table(int n)
 		for (y = 0; y <= n; y++)
 		{
 			z = x * y;
-			if (z > 10)
+			if (z >= 10)
 			{
 				_putchar(44);
 				_putchar(32);
