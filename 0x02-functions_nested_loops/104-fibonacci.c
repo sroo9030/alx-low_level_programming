@@ -18,7 +18,7 @@ int main(void)
 		if (i != 98 && i != 0)
 			printf(", ");
 
-		if (num1 + num2 > 10000000000 || num_h2 > 0 || num_h1 >0)
+		if (num1 + num2 > 10000000000 || num_h2 > 0 || num_h1 > 0)
 		{
 			h1 = (num1 + num2) / 10000000000;
 			h2 = (num1 + num2) % 10000000000;
