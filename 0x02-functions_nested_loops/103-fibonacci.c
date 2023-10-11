@@ -7,23 +7,23 @@
   */
 int main(void)
 {
-	long int num1 = 1;
-	long int num2 = 2;
-	long int num = 4000000;
-	long int sum = num1 + num2;
+	unsigned long num1 = 0;
+	unsigned long num2 = 1;
+	unsigned long sum;
+	int total;
 
-	while (sum < num)
+	while (1)
 	{
-		if (num2 ==2)
-			printf("%lu", num2);
+		sum = num1 + num2;
+		if (sum > 4000000)
+			break;
 
-		else if (sum % 2 == 0)
-			printf(" ,%lu", sum);
+		if (sum % 2 == 0)
+			total += sum;
 
 		num1 = num2;
 		num2 = sum;
-		sum = num1 + num2;
 	}
-	printf("\n");
+	printf("%d\n", total);
 	return (0);
 }
