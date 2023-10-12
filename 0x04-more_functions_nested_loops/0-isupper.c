@@ -10,13 +10,12 @@
 int _isupper(int c)
 {
 	int i = 'A';
-	
+
 	while (i <= 'Z')
 	{
 		if (i == c)
 			return (1);
-		else
-			i++;
+		i++;
 	}
 	return (0);
 }
