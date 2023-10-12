@@ -3,13 +3,15 @@
 
 /**
   * _isupper - Checks for uppercase character.
+  * @c: The character to check
+  * @i: Hold the upparcase characters
   *
-  * Return: Always 0
+  * Return: 1 if the character is uppercase 0 otherwise
   */
 int _isupper(int c)
 {
 	int i = 'A';
-
+	
 	while (i <= 'Z')
 	{
 		if (i == c)
@@ -17,7 +19,7 @@ int _isupper(int c)
 			return (1);
 			break;
 		} else
-			i++;
+			i++:
 	}
 	return (0);
 }
