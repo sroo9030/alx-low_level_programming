@@ -3,6 +3,7 @@
 
 /**
   * _isupper - Checks for uppercase character.
+  * @c: int type number
   *
   * Return: 1 if the character is uppercase 0 otherwise
   */
@@ -17,7 +18,7 @@ int _isupper(int c)
 			return (1);
 			break;
 		} else
-			i++:
+			i++;
 	}
 	return (0);
 }
