@@ -9,13 +9,8 @@
   */
 int _isdigit(int c)
 {
-	int i = '0';
+	if (c  >= 48 && c <= 57)
+		return (1);
 
-	while (i <= '9')
-	{
-		if (c <= i)
-			return (1);
-		i++;
-	}
 	return (0);
 }
