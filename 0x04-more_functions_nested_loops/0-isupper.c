@@ -3,8 +3,7 @@
 
 /**
   * _isupper - Checks for uppercase character.
-  * @c: The character to check
-  * @i: Hold the upparcase characters
+  * @c: int typr number
   *
   * Return: 1 if the character is uppercase 0 otherwise
   */
