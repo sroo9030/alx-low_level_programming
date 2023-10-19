@@ -5,6 +5,7 @@
 
 /**
   * *string_toupper - changes all lowercase letters to uppercasa
+  * @str: a char type array
   *
   * Return: The uppercase string
   */
