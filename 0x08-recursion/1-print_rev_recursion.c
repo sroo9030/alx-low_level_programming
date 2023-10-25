@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 #include "main.h"
 
 /**
@@ -8,12 +7,10 @@
   */
 void _print_rev_recursion(char *s)
 {
-	int len = strlen(s);
 
-	while (len - 1 >= 0)
+	if (*s != '\0')
 	{
-		putchar(s[len - 1]);
-		len--;
+		_print_rev_recursion(s + 1);
+		putchar(*s);
 	}
-	putchar('\n');
 }
