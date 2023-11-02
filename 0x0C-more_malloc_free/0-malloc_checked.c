@@ -5,14 +5,15 @@
 /**
   * *malloc_checked - a function that allocates memory using malloc
   * @b: an int type parameter
+  * Return: Nothing
   */
 void *malloc_checked(unsigned int b)
 {
-	char *p;
+	void *p;
 
 	p = malloc(b);
-	if (p == NULL)
-		return("98");
+	if (p == 0)
+		exit(98);
 
 	return (p);
 }
