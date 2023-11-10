@@ -1,4 +1,4 @@
-#include "calc.h"
+#include "3-calc.h"
 
 /**
   * main - perform math operation
@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 
 	if (argc != 4)
 	{
-		printf("$$$$$$Error\n");
+		printf("Error\n");
 		exit(98);
 	}
 
@@ -22,14 +22,14 @@ int main(int argc, char **argv)
 	b = atoi(argv[3]);
 	if ((b == 0))
 	{
-		printf("#######Error\n");
+		printf("Error\n");
 		exit(98);
 	}
 
 	op = get_op_func(argv[2]);
 	if (op == NULL)
 	{
-		printf("@@@@@@Error\n");
+		printf("Error\n");
 		exit(98);
 	}
 	printf("%d\n", op(a, b));
