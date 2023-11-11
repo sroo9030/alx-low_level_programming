@@ -1,6 +1,10 @@
 #include "variadic_functions.h"
 
 /**
+  * print_all - a function that prints anything
+  * @format:  list of types of arguments passed
+  *
+  * Return: Nothing
   */
 void print_all(const char * const format, ...)
 {
@@ -33,14 +37,14 @@ void print_all(const char * const format, ...)
 					break;
 			}
 			i++;
-			if (format[i] != '\0' && 
-					(format[i] == 'c' || 
-					 format[i] == 'i' || 
-					 format[i] == 'f' || 
+			if (format[i] != '\0' &&
+					(format[i] == 'c' ||
+					 format[i] == 'i' ||
+					 format[i] == 'f' ||
 					 format[i] == 's'))
 				printf(", ");
 		}
-		va_end(args);		
+		va_end(args);
 	}
 	printf("\n");
 }
