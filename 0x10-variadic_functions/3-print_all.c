@@ -8,43 +8,84 @@
   */
 void print_all(const char * const format, ...)
 {
-	unsigned int i = 0;
+	unsigned int i = 0, j = 0;
 	va_list args;
-	char *s;
+	char *s = "";
+	f_tp formats[] = {{"c", print_char},
+		{"i", print_int},
+		{"f", print_float},
+		{"s", print_string}};
 
-	if (format != NULL)
+	va_start(args, format);
+	while (format != NULL && format[i])
 	{
-		va_start(args, format);
-		while (format[i] != '\0')
+		j = 0;
+		while (j < 4)
 		{
-			switch (format[i])
+			if (format[i] == *formats[j].specifier)
 			{
-				case 'c':
-					printf("%c", va_arg(args, int));
-					break;
-				case 'i':
-					printf("%d", va_arg(args, int));
-					break;
-				case 'f':
-					printf("%f", va_arg(args, double));
-					break;
-				case 's':
-					s = va_arg(args, char *);
-					if (s == NULL)
-						printf("(nil)");
-					else
-						printf("%s", s);
-					break;
+				formats[j].f(s, args);
+				s = ", ";
 			}
-			i++;
-			if (format[i] != '\0' &&
-					(format[i] == 'c' ||
-					 format[i] == 'i' ||
-					 format[i] == 'f' ||
-					 format[i] == 's'))
-				printf(", ");
+			j++;
 		}
-		va_end(args);
+		i++;
 	}
+	va_end(args);
 	printf("\n");
+}
+
+/**
+  * print_char - print a char type parameters
+  * @separator: the separator of characters
+  * @args: a list of variadic arguments
+  *
+  * Return: Nothing
+  */
+void print_char(char *separator, va_list args)
+{
+	printf("%s%c", separator, va_arg(args, int));
+}
+
+/**
+  * print_int - print an int type parameters
+  * @separator: the separator of intgers
+  * @args: a list of variadic arguments
+  *
+  * Return: Nothing
+  */
+void print_int(char *separator, va_list args)
+{
+	printf("%s%i", separator, va_arg(args, int));
+}
+
+/**
+  * print_float - print a float type parameters
+  * @separator: the separator of intgers
+  * @args: a list of variadic arguments
+  *
+  * Return: Nothing
+  */
+void print_float(char *separator, va_list args)
+{
+	printf("%s%f", separator, va_arg(args, double));
+}
+
+/**
+  * print_string - print a string type parameters
+  * @separator: the separator of characters
+  * @args: a list of variadic arguments
+  *
+  * Return: Nothing
+  */
+void print_string(char *separator, va_list args)
+{
+	char *ptr = va_arg(args, char *);
+
+	if (ptr == NULL)
+	{
+		printf("%s%s", separator, "(nil)");
+		return;
+	}
+	printf("%s%s", separator, ptr);
 }
