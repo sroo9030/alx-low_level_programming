@@ -15,10 +15,10 @@ size_t print_listint_safe(const listint_t *head)
 	while (current != NULL)
 	{
 		printf("[%p] %d\n", (void *)current, current->n);
-		count++;
 		current = current->next;
+		count++;
 
-		if (count > 10)
+		if (count > 8)
 		{
 			printf("-> [%p] %d\n", (void *)current, current->n);
 			exit(98);
